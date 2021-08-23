@@ -1,0 +1,94 @@
+.app {
+	padding: 25px;
+	max-width: 1100px;
+	margin: 0 auto 46px;
+
+    @media (min-width: 768px) {
+        padding: 100px 25px;
+    }
+
+	@media (min-width: 1200px) {
+		
+	}
+}
+
+.header {
+    padding-bottom: 20px;
+    &__title {
+        font-size: 60px;
+        font-weight: 500;
+    }
+}
+
+.custom-panel {
+    display: grid;
+    grid-template-columns: 100fr;
+
+    @media (min-width: 1020px) {
+        grid-template-columns: 40fr 60fr;
+    }
+
+}
+
+.image {
+    &__wrapper{
+        position: relative;
+        height: 430px;      
+    }
+    
+
+}
+
+img {
+    position: absolute;
+    width: auto;
+    max-height: 400px;
+}
+
+.styling-panel {
+    font-weight: 500;
+    padding: 0;
+
+    @media (min-width: 1020px) {
+
+        padding: 0 50px;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.regButton {
+    padding: 15px 25px;
+    border: 1px solid cornflowerblue;
+    border-radius: 35px;
+    background: none;
+    margin: 0px 13px 13px 0;
+    color: cornflowerblue;
+
+    &:hover {
+        border: 1px solid darkblue;
+        color: darkblue;
+    }
+
+    &.active {
+        border: 1px solid darkblue;
+        background-color: darkblue;
+        color: white;
+    }
+
+}
+
+
+.bgButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0 18px 18px 0;
+    border: none;
+
+    &.active {
+        box-shadow: 0 0 3pt 2pt cornflowerblue;
+    }
+}
