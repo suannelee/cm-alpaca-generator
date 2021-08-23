@@ -16,7 +16,7 @@ function CustomPanel(){
     const changeStyle = (i) => {
         const newStyle = styles.slice();
         newStyle[part].style.map((style) => (
-            style.selected == "true"
+            style.selected === "true"
                 ? style.selected = "false" : null
         ))
         newStyle[part].style[i].selected = "true";
@@ -59,7 +59,7 @@ function CustomPanel(){
 
         const alpaca = styles.map((partObj) => (
             partObj.style.map((styleObj) => (
-                styleObj.selected == "true" ?
+                styleObj.selected === "true" ?
                 <AlpacaImg
                     key={styleObj.styleId}
                     part={partObj.partId}
@@ -78,13 +78,12 @@ function CustomPanel(){
     const randomizeAlpaca = () => {
         const newStyle = styles.slice();
 
-        newStyle.map((partObj) => {
-
+        newStyle.forEach((partObj) => {
             const max = partObj.style.length;
             var rand = Math.floor(Math.random() * max);
 
             partObj.style.map((styleObj) => (
-                styleObj.selected == "true"
+                styleObj.selected === "true"
                     ? styleObj.selected = "false" : null
             ))
             partObj.style[rand].selected = "true";

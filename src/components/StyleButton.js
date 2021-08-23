@@ -6,17 +6,17 @@ const StyleButton = ({ part, style, styles, onClick }) => {
     const partType = partObj.partName;
     const styleBtn = partObj.style[style];
     const styleName = styleBtn.styleName;
-    const isSelected = styleBtn.selected == "true" ? "active" : "";
+    const isSelected = styleBtn.selected === "true" ? "active" : "";
     
     return(
         <button 
             className={`
-                ${partType == "Backgrounds" ? "bgButton" : "regButton"} 
+                ${partType === "Backgrounds" ? "bgButton" : "regButton"} 
                 ${isSelected}
             `} 
-            style={{backgroundColor: partType == "Backgrounds" ? styleName : ""}}
+            style={{backgroundColor: partType === "Backgrounds" ? styleName : ""}}
             onClick={onClick}>
-            {partType == "Backgrounds" ? "" : styleName}
+            {partType === "Backgrounds" ? "" : styleName}
         </button>
     )
 }

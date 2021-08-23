@@ -3,7 +3,7 @@ import { alpacaFeatures } from '../alpacaFeatures';
 
 const PartButton = ({ part, selected, onClick }) => {
     const partBtn = alpacaFeatures[part].partName;
-    const isSelected = selected == part ? "active" : "";
+    const isSelected = selected === part ? "active" : "";
 
     return(
         <button 
