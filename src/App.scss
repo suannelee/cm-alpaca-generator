@@ -13,10 +13,14 @@
 }
 
 .header {
-    padding-bottom: 20px;
+    padding-bottom: 0;
     &__title {
         font-size: 60px;
         font-weight: 500;
+    }
+
+    @media (min-width: 1020px) {
+        padding-bottom: 20px;
     }
 }
 
@@ -33,16 +37,22 @@
 .image {
     &__wrapper{
         position: relative;
-        height: 430px;      
-    }
-    
+        height: 320px;     
 
+        @media (min-width: 1020px) {
+            height: 430px;
+        } 
+    }
 }
 
 img {
     position: absolute;
     width: auto;
-    max-height: 400px;
+    max-height: 300px;
+
+    @media (min-width: 1020px) {
+        max-height: 400px;
+    }
 }
 
 .styling-panel {
@@ -50,7 +60,6 @@ img {
     padding: 0;
 
     @media (min-width: 1020px) {
-
         padding: 0 50px;
     }
 }
@@ -60,11 +69,11 @@ button {
 }
 
 .regButton {
-    padding: 15px 25px;
+    padding: 10px 20px;
     border: 1px solid cornflowerblue;
     border-radius: 35px;
     background: none;
-    margin: 0px 13px 13px 0;
+    margin: 0px 8px 8px 0;
     color: cornflowerblue;
 
     &:hover {
@@ -78,17 +87,28 @@ button {
         color: white;
     }
 
+    @media (min-width: 1020px) {
+        padding: 15px 25px;
+    }
+
 }
 
 
 .bgButton {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    margin: 0 18px 18px 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 0 14px 14px 0;
     border: none;
 
     &.active {
         box-shadow: 0 0 3pt 2pt cornflowerblue;
+    }
+
+    @media (min-width: 1020px) {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin: 0 18px 18px 0;
     }
 }
